@@ -10,7 +10,7 @@ public class HelloController {
     // Quando chegar um requisição do tipo get para a requisição /hello,
     // o spring chama o método com essa anotação
     @GetMapping
-    public String olaMundo(){
+    public String olaMundo() {
         return "Hello World Spring!";
     }
 }
