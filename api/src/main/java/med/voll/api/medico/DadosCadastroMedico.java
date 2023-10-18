@@ -5,6 +5,7 @@ import med.voll.api.endereco.DadosEndereco;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
@@ -17,7 +18,6 @@ public record DadosCadastroMedico(
         @NotBlank
         String telefone,
         @NotBlank
-        @Pattern(regexp = "\\d{11}")
         String crm,
         @NotNull
         Especialidade especialidade,
