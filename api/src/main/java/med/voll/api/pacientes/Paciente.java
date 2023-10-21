@@ -23,11 +23,13 @@ import javax.persistence.*;
         private String email;
         private String cpf;
         private String telefone;
+        private Boolean ativo;
 
         @Embedded
         private Endereco endereco;
 
         public Paciente(DadosCadastroPaciente dados) {
+            this.ativo = true;
             this.nome = dados.nome();
             this.email = dados.email();
             this.telefone = dados.telefone();
@@ -35,4 +37,18 @@ import javax.persistence.*;
             this.endereco = new Endereco(dados.endereco());
         }
 
+        public void atualizarInfomacoes(DadosAtualizacaoPacientes dados) {
+            if(dados.email() != null){
+                this.email = dados.email();
+            }
+            if(dados.telefone() != null){
+                this.telefone = dados.telefone();
+            }
+            if(dados.endereco() != null){
+                this.endereco.atualizarEndereco(dados.endereco());
+            }
+        }
+        public void inativar() {
+            this.ativo = false;
+        }
     }
