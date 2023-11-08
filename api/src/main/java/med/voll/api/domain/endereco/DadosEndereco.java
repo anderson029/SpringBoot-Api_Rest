@@ -1,4 +1,4 @@
-package med.voll.api.endereco;
+package med.voll.api.domain.endereco;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;

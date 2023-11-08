@@ -1,6 +1,5 @@
-package med.voll.api.pacientes;
+package med.voll.api.domain.pacientes;
 
-import net.bytebuddy.jar.asm.commons.Remapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
